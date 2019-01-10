@@ -1,0 +1,42 @@
+estructura basica del callback
+
+let nombre variable = (param) =>{
+ 	 
+	return new Promise((resolve, reject)) =>{
+	funciones a hacer 
+	
+	}
+}
+
+solo se puede regresar un paramatero, si se necesitan más, se hace un objeto
+
+el this en las funciones de flecha apunta al valor que tenga fuera del objeto, ya que no existe el objeto window, por lo tanto, en las funciones flecha, es mejor quitarle la flecha para que apunte local y no fuera de la funciòn
+
+en ecma script 6 , si una propieda tendrà el mismo nombre de la variable que recibirà, se puede omitir la asignaciòn id : id = id . Es comun poner el primer parametro de un callback, un error , para manejarlo. 
+
+si se harà una validaciòn donde el error no existe, se manda como primer parametro "null"
+
+una promesa esa una función que tiene dos callbacks, resolve y reject y luego le sigue la función flecha
+
+se llama a los resolve y reject así 
+
+nombreDeFuncion(param).then(lo que esperas recibir => {
+	objetodelResolve
+}, (err) => {
+	objetoDelReject
+}
+
+si cuando le hablas a una funcion y después del then regresas una promesa, puedes aplicar otro then
+
+let nombreDeLafuncion = async() => {
+	return fernando
+}
+
+todo eso es igual a declarar una promesa con el resolve
+
+.catch(e =>{
+}
+
+throw new Error se declara dentro del async y este va a generar el catch y el error para la funcionm
+
+el await siempre va dentro del async y sirve para esperar a que se ejecute una promesa y luego siga ejecutando esa misma funcion async
